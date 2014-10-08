@@ -1,0 +1,47 @@
+﻿Installing assembly 'C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.InstallLog
+   assemblypath = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe
+Committing assembly 'C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.InstallLog
+   assemblypath = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe
+An exception occurred during the Commit phase of the Niviane_Service.ProjectInstaller installer.
+System.ArgumentException: The savedState dictionary does not contain the expected values and might have been corrupted.
+An exception occurred during the Commit phase of the installation. This exception will be ignored and installation will continue. However, the application might not function correctly after installation is complete.
+Installing assembly 'C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.InstallLog
+   assemblypath = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe
+Installing service Niviane...
+Service Niviane has been successfully installed.
+Creating EventLog source Niviane in log Application...
+Committing assembly 'C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.InstallLog
+   assemblypath = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe
+Installing assembly 'C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.InstallLog
+   assemblypath = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe
+Installing service Niviane...
+Creating EventLog source Niviane in log Application...
+Rolling back assembly 'C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.InstallLog
+   assemblypath = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe
+Restoring event log to previous state for source Niviane.
+Uninstalling assembly 'C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.InstallLog
+   assemblypath = C:\Work\Z-Wave\Niviane\Niviane_Service\bin\Debug\Niviane_Service.exe
+Removing EventLog source Niviane.
+Service Niviane is being removed from the system...
+Service Niviane was successfully removed from the system.

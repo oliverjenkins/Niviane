@@ -1,0 +1,6 @@
+C:\Work\Z-Wave\Niviane\ConsoleClient\bin\Release\ConsoleClient.exe.config
+C:\Work\Z-Wave\Niviane\ConsoleClient\bin\Release\ConsoleClient.exe
+C:\Work\Z-Wave\Niviane\ConsoleClient\bin\Release\ConsoleClient.pdb
+C:\Work\Z-Wave\Niviane\ConsoleClient\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Work\Z-Wave\Niviane\ConsoleClient\obj\x86\Release\ConsoleClient.exe
+C:\Work\Z-Wave\Niviane\ConsoleClient\obj\x86\Release\ConsoleClient.pdb

@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Niviane_Service.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LogFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Logs\Niviane.txt</Value>
+    </Setting>
+    <Setting Name="ZWavePollInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ZWaveConfigPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">config</Value>
+    </Setting>
+    <Setting Name="ZWaveSerialPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM3</Value>
+    </Setting>
+    <Setting Name="VLCPathToExe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\VideoLAN\VLC\vlc.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

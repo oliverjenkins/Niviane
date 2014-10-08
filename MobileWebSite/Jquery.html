@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simple Niviane JQuery Client</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" ></script>
+
+    <script type="text/javascript">
+        var serviceBaseURL = "http://localhost:9087/Niviane/"; // Include trailing slash
+        
+
+        function PopulateNodeList(data) {
+            var nodeList = "<h2>Node List</h2><table><thead><tr><th>Node Type</th><th>Basic</th><th>Action</th></tr></thead>";
+
+            for (var n = 0; n < data.length; n++) {
+                nodeList += RenderNode(data[n]);
+            }
+            nodeList += "</table>";
+
+            $('#NodeList').html(nodeList).css('display','block');
+        }
+
+        function RenderNode(node) {
+            var nodeHtml = '<tr id="Node' + node.NodeID + '"><td>' + node.Name + " " + node.Type + "</td><td>" + node.Basic + "</td>";
+
+            switch (node.Type) {
+                case "Multilevel Switch":
+                case "Multilevel Power Switch":
+                    nodeHtml += '<td><select name="' + node.NodeID + '" id="' + node.NodeID + '">' + RenderOptionList(0, 100, node.Basic) + '</option></td>';
+                    break;
+                case "Binary Power Switch":
+                    nodeHtml += '<td><select name="' + node.NodeID + '" id="' + node.NodeID + '"><option value="0">&nbsp;</option>'
+                    if (node.NodeBasic >= 128) { 
+                        nodeHtml += '<option value="255" selected="selected">On</option><option value="0">Off</option>';
+                    } else { 
+                        nodeHtml += '<option value="255">On</option><option value="0"  selected="selected">Off</option>';
+                    } 
+                    nodeHtml += '</select></td>';
+                default:
+                    nodeHtml += "<td>&nbsp;</td>";
+                    break;
+            }
+
+            return nodeHtml + "</tr>";
+        }
+
+        function RenderOptionList(from, to, selectedValue) {
+            var optionList = "";
+            for (var i = from; i < to; i++) {
+                optionList += '<option value="' + i + '" ' + ((selectedValue == i) ? 'selected="selected"' : '') + '>' + i + '</option>';
+            }
+            return optionList;
+        }
+
+        $(document).ready(function () {
+            $('#GetService').click(function (e) {
+                e.preventDefault();
+                basePath = $('#BasePathForService').attr('value');
+
+
+                $.getJSON(BuildServiceURL('NodeList'), function (data) {
+                    PopulateNodeList(data);
+                });
+            });
+
+
+            $.ajax({
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                url: serviceBaseURL + "nodes?callback=?",
+                data: "{}",
+                dataType: "json"
+                , success: function (data, textStatus, jqXHR) {
+
+                    PopulateNodeList(data)
+                }
+
+            });
+            function DoCommand(command, details) {
+                var cmd = "";
+                switch (command) {
+                    case 'NodeBasic':
+                        
+                        cmd = "node/" + details.NodeID + "/basic/" + details.Value;
+                        break;
+                    default:
+                        $('#Message').html('Command not implemented');
+                        break;
+                }
+                if (cmd.length > 0) {
+                    var commandURL = serviceBaseURL + cmd + '?callback=?';
+                    serviceBaseURL
+                    $.ajax({
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        url: commandURL,
+                        data: "{}",
+                        dataType: "json"
+                        , success: function (data, textStatus, jqXHR) {
+                            $('#Message').html('Command <strong>' + commandURL + '</strong> complete');
+                        }
+
+                    });
+                }
+            }
+
+            $('#NodeList').change(function (e, i) {
+                DoCommand('NodeBasic', { NodeID: e.target.id, Value: $(':selected', e.target).val() });
+
+            });
+
+        });
+    
+    </script>
+</head>
+<body>
+  
+    <form action="" method="get">
+        
+
+        <div id="NodeList" style="display:none;">
+            
+        
+        </div>
+        <p id="Message"></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://niviane/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Niviane" targetNamespace="http://niviane/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://niviane/Imports">
+      <xsd:import namespace="http://niviane/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Niviane_Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Niviane_IsAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAvailable" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_IsAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_Nodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nodes" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_Nodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_Node_InputMessage">
+    <wsdl:part name="parameters" element="tns:Node" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_Node_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodeBasic_InputMessage">
+    <wsdl:part name="parameters" element="tns:NodeBasic" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodeBasic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NodeBasicResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodePollingOn_InputMessage">
+    <wsdl:part name="parameters" element="tns:NodePollingOn" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodePollingOn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NodePollingOnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodePollingOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:NodePollingOff" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodePollingOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NodePollingOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodeName_InputMessage">
+    <wsdl:part name="parameters" element="tns:NodeName" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodeName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NodeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodeLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:NodeLocation" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_NodeLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NodeLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_AllOn_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllOn" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_AllOn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllOnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_AllOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllOff" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_AllOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_ProcessRunning_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRunning" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_ProcessRunning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRunningResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_ProcessStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStart" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_ProcessStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_ProcessStop_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStop" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_ProcessStop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStopResponse" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_VLC_InputMessage">
+    <wsdl:part name="parameters" element="tns:VLC" />
+  </wsdl:message>
+  <wsdl:message name="Niviane_VLC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VLCResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="false" name="Niviane">
+    <wsdl:operation name="IsAvailable">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/IsAvailable" message="tns:Niviane_IsAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/IsAvailableResponse" message="tns:Niviane_IsAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nodes">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/Nodes" message="tns:Niviane_Nodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/NodesResponse" message="tns:Niviane_Nodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Node">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/Node" message="tns:Niviane_Node_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/NodeResponse" message="tns:Niviane_Node_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NodeBasic">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/NodeBasic" message="tns:Niviane_NodeBasic_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/NodeBasicResponse" message="tns:Niviane_NodeBasic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NodePollingOn">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/NodePollingOn" message="tns:Niviane_NodePollingOn_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/NodePollingOnResponse" message="tns:Niviane_NodePollingOn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NodePollingOff">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/NodePollingOff" message="tns:Niviane_NodePollingOff_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/NodePollingOffResponse" message="tns:Niviane_NodePollingOff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NodeName">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/NodeName" message="tns:Niviane_NodeName_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/NodeNameResponse" message="tns:Niviane_NodeName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NodeLocation">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/NodeLocation" message="tns:Niviane_NodeLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/NodeLocationResponse" message="tns:Niviane_NodeLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllOn">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/AllOn" message="tns:Niviane_AllOn_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/AllOnResponse" message="tns:Niviane_AllOn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllOff">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/AllOff" message="tns:Niviane_AllOff_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/AllOffResponse" message="tns:Niviane_AllOff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRunning">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/ProcessRunning" message="tns:Niviane_ProcessRunning_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/ProcessRunningResponse" message="tns:Niviane_ProcessRunning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStart">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/ProcessStart" message="tns:Niviane_ProcessStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/ProcessStartResponse" message="tns:Niviane_ProcessStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStop">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/ProcessStop" message="tns:Niviane_ProcessStop_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/ProcessStopResponse" message="tns:Niviane_ProcessStop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VLC">
+      <wsdl:input wsaw:Action="http://niviane/Niviane/VLC" message="tns:Niviane_VLC_InputMessage" />
+      <wsdl:output wsaw:Action="http://niviane/Niviane/VLCResponse" message="tns:Niviane_VLC_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="Niviane">
+    <wsdl:port name="WSHttpBinding_Niviane" binding="i0:WSHttpBinding_Niviane">
+      <soap12:address location="http://localhost:9087/Niviane/xml" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:9087/Niviane/xml</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/oliver-f1e2d5e4</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
