@@ -20,6 +20,10 @@ namespace Niviane_Service
             InitializeComponent();
         }
 
+        public void Start()
+        {
+            this.OnStart(new string[0]);
+        }
         protected override void OnStart(string[] args)
         {
             Log("Service", "Service is starting");
@@ -50,6 +54,8 @@ namespace Niviane_Service
             {
                 using (System.IO.StreamWriter sw = new System.IO.StreamWriter(LogFilePath, true))
                 {
+
+
                     sw.WriteLine(entry);
                 }
             }
